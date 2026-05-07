@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Обо мне</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="js/general.js" defer></script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="card-block">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="hobbies.html">Увлечения</a></li>
+                </ul>
+            </nav>
+            <h1 class="about-me">обо мне.</h1>
+            <div class="about-photo">
+                <img src="img/about/IMG_4163.JPG" alt="Фото 1">
+                <img src="img/about/ттIMG_4241.JPG" alt="Фото 2">
+                <img src="img/about/nIMG_4157.JPG" alt="Фото 3">
+            </div>
+        </header>
+        
+        <main class="card-block">
+            <section>
+                <h2 class="about-me-h2">starter пак 20 lvl. (my бейсик set)</h2>
+                <div class="starter-collage-container">
+                    <div class="starter-item portrait-item" id="portrait" onclick="toggleTooltip('portrait')">
+                        <img src="img/about/meFull.png" alt="portrait">
+                        
+                        <div id="tooltip-portrait" class="tooltip-content tooltip-top">
+                            <h4>Это я!</h4>
+                            <p>Привет! Я студентка, обожаю программирование и искусство. Здесь — мои главные инструменты.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/meFull.png" class="portrait-item" alt="portrait"> -->
+                    
+                    <div class="starter-item item-books" id='artbooks' onclick="toggleTooltip('artbooks')">
+                        <img src="img/about/скетчбуки.png" alt="artbooks">
+                        <div id="tooltip-books" class="tooltip-content tooltip-left">
+                            <h4>Скетчбуки и артбуки</h4>
+                            <p>Огромное количество любимых блокнотиков, которые хранят мои рисунки и эскизы. Многие из них являются подарками близких людей или сделаны чьими-то руками.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/скетчбуки.png" class="starter-item item-books" alt="artbooks"> -->
+                    <div class="starter-item item-paints" id='paints' onclick="toggleTooltip('paints')">
+                        <img src="img/about/краски.png" alt="paints">
+                        <div id="tooltip-paints" class="tooltip-content tooltip-left">
+                            <h4>Краски</h4>
+                            <p>Масло, акварель, акрил, гуашь, темпера...</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/краски.png" class="starter-item item-paints" alt="paints"> -->
+                    <div class="starter-item item-pens" id='pens' onclick="toggleTooltip('pens')">
+                        <img src="img/about/pens.png" alt="pens">
+                        <div id="tooltip-pens" class="tooltip-content tooltip-left">
+                            <h4>Карандаши Koh-i-Noor</h4>
+                            <p>База и истоки любого творца. С этого начинаются картины, эскизы, идеи, чертежи...</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/pens.png" class="starter-item item-pens" alt="pens"> -->
+                    <div class="starter-item item-bag" id='bag' onclick="toggleTooltip('bag')">
+                        <img src="img/about/сумка.png" alt="bag">
+                        <div id="tooltip-bag" class="tooltip-content tooltip-left">
+                            <h4>Сумка angel kiss</h4>
+                            <p>Большая и вместительная сумка в стиле y2k с большим количеством обвеса. В ней я и ношу всё, что здесь перечислено (или почти всё).</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/сумка.png" class="starter-item item-bag" alt="bag"> -->
+                    
+                    <div class="starter-item item-camera" id='camera' onclick="toggleTooltip('camera')">
+                        <img src="img/about/canon100d.png" alt="camera">
+                        <div id="tooltip-camera" class="tooltip-content tooltip-right">
+                            <h4>Canon 100D</h4>
+                            <p>Моя первая зеркалка. Мой напарник на любом мероприятии и в любом путешествии.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/canon100d.png" class="starter-item item-camera" alt="camera"> -->
+                    <div class="starter-item item-phone" id='phone' onclick="toggleTooltip('phone')">
+                        <img src="img/about/s25u.png" alt="phone">
+                        <div id="tooltip-phone" class="tooltip-content tooltip-right">
+                            <h4>Samsung s25 ultra</h4>
+                            <p>Телефон мечты, который может всё. От набросков и скетчей в любой момент до съёмки и монтажа видео.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/s25u.png" class="starter-item item-phone" alt="phone"> -->
+                    <div class="starter-item item-tablet" id='tablet' onclick="toggleTooltip('tablet')">
+                        <img src="img/about/ipad.png" alt="tablet">
+                        <div id="tooltip-tablet" class="tooltip-content tooltip-right">
+                            <h4>Ipad 12.9 pro</h4>
+                            <p>Планшет, который активно используется как графический. На нем создаются практически все диджитал арты.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/ipad.png" class="starter-item item-tablet" alt="tablet"> -->
+                    <div class="starter-item item-laptop" id='laptop' onclick="toggleTooltip('laptop')">
+                        <img src="img/about/vivobook.png" alt="laptop">
+                        <div id="tooltip-laptop" class="tooltip-content tooltip-right">
+                            <h4>ASUS Vivobook</h4>
+                            <p>Мой первый ноутбук, подаренный родителями на окончание школы. Здесь происходит практически вся рабочая и учебная деятельность.</p>
+                        </div>
+                    </div>
+                    <!-- <img src="img/about/vivobook.png" class="starter-item item-laptop" alt="laptop"> -->
+                </div>
+            </section>
+            <section>
+                <p> В этой жизнь есть очень много интересных вещей, и мне, пожалуй, хотелось бы уметь и иметь всё, но, к сожалению, это невозможно. Тем не менее, в своём подходе к жизни я не останавливаюсь на чем-то одном, и стараюсь постигать разные сферы. 
+                </p>
+                <p> Так, еще с детства я осознала, что хочу быть художником. Параллельно с учебой в школе ходила на танцы (классическая хореография и народные) и в художественную школу.
+                </p>
+            </section>
+        </main>
+        
+        <footer class="card-block">
+            <p>© 2026 Ильина Ксения. Ссылка на <a href="http://uni-vologda.ac.ru" target="_blank">сайт кафедры</a>.</p>
+            <div id="visitor-counter">👥 Посетителей: <span>0</span></div>
+        </footer>
+    </div>
+  
+  <!-- <a href="#" class="scroll-top">↑</a> -->
+    <button id="scrollToTopBtn" class="back-to-top" aria-label="Вернуться наверх">
+        ↑
+    </button>
+    <script src="js/counter.js" defer></script>
+</body>
+
+</html>

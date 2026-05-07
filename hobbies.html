@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Увлечения</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/hobbies.js" defer></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="card-block">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                </ul>
+            </nav>
+            <h1 class="about-me-header2">Увлечения</h1>
+        </header>
+        
+        <main>
+            <div class="compatibility-test card-block">
+                <div class="test-header">
+                    <div class="test-logo">
+                        <img src="img/capcha/Recaptcha.png" alt="logo" width="40" height="40">
+                    </div>
+                    <div class="test-title">Насколько мы совместимы?</div>
+                </div>
+
+                <div class="test-subtitle">
+                    🌸 Выберите то, что нравится и вам 🌸
+                </div>
+
+                <div id="images-rc" class="images-grid">
+                    <!-- 9 картинок с подписями -->
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/Гибли.jpg" alt="Гибли">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Студия Гибли</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/Марк.jpg" alt="Марк">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Марк</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/Стругацкие.jpg" alt="Книги">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Братья Стругацкие</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/Лилии.jpg" alt="Лилии">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Лилии</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/мото.jpg" alt="Мотоцикл">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Мотоциклы</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/ДомУМоря.jpg" alt="Дом у моря">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Дом у моря</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/котик.jpg" alt="Кот">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Кошки</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/каризма.jpg" alt="Каризма">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Каризма</span>
+                    </div>
+                    <div class="image-rc" data-status="0">
+                        <div class="image-wrapper">
+                            <img class="hobby-img" src="img/capcha/собачка.jpg" alt="Собака">
+                            <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
+                        </div>
+                        <span class="hobby-label">Собаки</span>
+                    </div>
+                </div>
+
+                <button class="verify-btn" onclick="calculateCompatibility()">✨ Подтвердить выбор ✨</button>
+            </div>
+        </main>
+
+        <footer class="card-block">
+            <div id="compatibility-result" style="display: none;"></div>
+            <p>© 2026 Ильина Ксения. Ссылка на <a href="http://uni-vologda.ac.ru" target="_blank">сайт кафедры</a>.</p>
+            <div id="visitor-counter">👥 Посетителей: <span>0</span></div>
+        </footer>
+    </div>
+    <a href="#" class="scroll-top">↑</a>
+    <script src="js/counter.js" defer></script>
+</body>
+</html>
