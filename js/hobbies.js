@@ -1,7 +1,7 @@
-// Ваш профиль (1 – нравится, 0 – нет)
-const myHobbyProfile = [1, 0, 1, 0, 1, 1, 0, 0, 1];
+// Мой профиль (1 – нравится, 0 – нет)
+const myHobbyProfile = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 const hobbyNames = [
-    "Студия Гибли", "Марк Цукерберг", "Братья Стругацкие",
+    "Студия Гибли", "Марк", "Братья Стругацкие",
     "Лилии", "Мотоциклы", "Дом у моря",
     "Кошки", "Каризма", "Собаки"
 ];
@@ -33,10 +33,10 @@ window.calculateCompatibility = function() {
 };
 
 function getMessage(percent, hobbies) {
-    if (percent === 100) return "💖 Абсолютная совместимость! Мы точно подружимся!";
-    if (percent >= 70) return `✨ У нас много общего! Нас объединяет: ${hobbies.join(', ')}.`;
-    if (percent >= 40) return "🌱 Есть общие интересы, это уже начало!";
-    return "🌈 Мы очень разные, но противоположности притягиваются!";
+    if (percent === 100) return "Абсолютная совместимость! Мы точно подружимся!";
+    if (percent >= 70) return `У нас много общего! Нас объединяет: ${hobbies.join(', ')}.`;
+    if (percent >= 40) return " Есть общие интересы, это уже начало!";
+    return "Мы очень разные, но противоположности притягиваются!";
 }
 
 function showResult(message, percent) {
@@ -51,7 +51,7 @@ function showResult(message, percent) {
             <h3>Совместимость: ${percent}%</h3>
             <p>${message}</p>
             ${selected.length ? `<div class="user-selected">Вы выбрали: ${selected.join(', ')}</div>` : ''}
-            <button onclick="resetCompatibilityTest()">🔄 Пройти заново</button>
+            <button onclick="resetCompatibilityTest()">Пройти заново</button>
         </div>
     `;
     $('#compatibility-result').html(html).fadeIn(500);
