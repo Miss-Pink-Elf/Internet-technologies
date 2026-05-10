@@ -12,9 +12,10 @@
    <script src="js/general.js" defer></script>
    <script src="js/gallery.js" defer></script>
 </head>
+
 <body>
     <div class="page-wrapper">
-        <header class="card-block">
+        <header class="card-block gallery-header">
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -23,13 +24,29 @@
                     <li><a href="hobbies.html">Увлечения</a></li>
                 </ul>
             </nav>
-            <h1 class="about-me-header2">Галерея моих работ</h1>
+
+            <div class="gallery-promo">
+                <div class="ticket-group">
+                    <img src="img/gallery/cover/ticket.png" alt="ticket">
+                    <h2 class="t-1">Билет <br>в мою</h2>
+                    <h5 class="t-2">тгк: @Ms_Pink_Elf</h5>
+                </div>
+        
+                <h1 class="gallery-title">Галерею</h1>
+            </div>
+            <!-- <img src="img/gallery/cover/ticket.png" alt="ticket"> -->
+
+            <!-- <h1 class="about-me">Галерею</h1> -->
+
+            <div class="about-photo">
+                <img src="img/gallery/cover/IMG_20260509_155817_585.jpg" alt="Фото 1">
+                <img src="img/gallery/cover/IMG_20260509_155551_049.jpg" alt="Фото 2">
+                <img src="img/gallery/cover/IMG_20260509_155457_279.jpg" alt="Фото 3">
+            </div>
         </header>
         
         <main>
-            <!-- Контейнер, в котором будет размещаться сетка -->
             <div class="gallery-grid" id="gallery-grid">
-                <!-- Каждый блок `.gallery-item` – одна работа -->
                 <div class="gallery-item">
                     <img src="img/gallery/art1.jpg" alt="Летний вечер" loading="lazy">
                     <div class="gallery-caption">
@@ -117,8 +134,8 @@
                 <div class="gallery-item">
                     <img src="img\gallery\арт13.png" alt="Бархатцы" loading="lazy">
                     <div class="gallery-caption">
-                        <h3>Бархатцы</h3>
-                        <p>диджитал, 2025</p>
+                        <h3>Одиночество</h3>
+                        <p>диджитал, 2022</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -132,7 +149,7 @@
                     <img src="img\gallery\арт15.JPG" alt="Девушка в платке" loading="lazy">
                     <div class="gallery-caption">
                         <h3>Девушка в платке</h3>
-                        <p>диджитал, 2025</p>
+                        <p>диджитал, 2024</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -349,8 +366,8 @@
         </main>
         
         <footer class="card-block">
-            <p>© 2026 Ильина Ксения. Ссылка на <a href="http://uni-vologda.ac.ru" target="_blank">сайт кафедры</a>.</p>
-            <div id="visitor-counter">👥 Посетителей: <span>0</span></div>
+            <p>© 2026 Ильина Ксения. Ссылка на <a href="https://pm.vogu35.ru/" target="_blank">сайт кафедры</a>.</p>
+            <div class="visitor" id="visitor-counter">Посетителей: <span>0</span></div>
         </footer>
     </div>
   
@@ -358,6 +375,5 @@
     <button id="scrollToTopBtn" class="back-to-top" aria-label="Вернуться наверх">
         ↑
     </button>
-    <script src="js/counter.js" defer></script>
 </body>
 </html>
