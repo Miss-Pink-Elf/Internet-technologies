@@ -20,14 +20,12 @@ $(document).ready(function() {
 
    initMasonry();
 
-   // Перестраиваем сетку при изменении размера окна (debounce)
    let resizeTimer;
    $(window).on('resize', function() {
        clearTimeout(resizeTimer);
        resizeTimer = setTimeout(initMasonry, 150);
    });
 
-   // Лайтбокс при клике на карточку
    $('.gallery-item').on('click', function(e) {
        const img = $(this).find('img').attr('src');
        const captionTitle = $(this).find('.gallery-caption h3').text();
