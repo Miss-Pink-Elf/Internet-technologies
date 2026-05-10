@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/hobbies.js" defer></script>
+    <script src="js/general.js" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -20,7 +21,12 @@
                     <li><a href="gallery.html">Галерея</a></li>
                 </ul>
             </nav>
-            <h1 class="about-me-header2">Увлечения</h1>
+            <h1 class="about-me">Мои увлечения</h1>
+            <div class="about-photo">
+                <img src="img/hobbies/nIMG_1199.png" alt="Фото 1">
+                <img src="img/hobbies/nIMG_1278.png" alt="Фото 2">
+                <img src="img/hobbies/nIMG_1202.png" alt="Фото 3">
+            </div>
         </header>
         
         <main>
@@ -29,12 +35,12 @@
                     <div class="test-logo">
                         <img src="img/capcha/Recaptcha.png" alt="logo" width="40" height="40">
                     </div>
-                    <div class="test-title">Насколько мы совместимы?</div>
+                    <h2>Насколько мы совместимы?</h2>
                 </div>
 
-                <div class="test-subtitle">
-                    🌸 Выберите то, что нравится и вам 🌸
-                </div>
+                <p class="test-subtitle">
+                    Выберите то, что нравится и Вам:
+                </p>
 
                 <div id="images-rc" class="images-grid">
                     <!-- 9 картинок с подписями -->
@@ -43,21 +49,21 @@
                             <img class="hobby-img" src="img/capcha/Гибли.jpg" alt="Гибли">
                             <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
                         </div>
-                        <span class="hobby-label">Студия Гибли</span>
+                        <span class="hobby-label">Студия Гибли <br>(вселенная Хаяо Миядзаки)</span>
                     </div>
                     <div class="image-rc" data-status="0">
                         <div class="image-wrapper">
                             <img class="hobby-img" src="img/capcha/Марк.jpg" alt="Марк">
                             <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
                         </div>
-                        <span class="hobby-label">Марк</span>
+                        <span class="hobby-label">Марк <br>(старые японские автомобили)</span>
                     </div>
                     <div class="image-rc" data-status="0">
                         <div class="image-wrapper">
                             <img class="hobby-img" src="img/capcha/Стругацкие.jpg" alt="Книги">
                             <div class="check-badge"><i class="ri-checkbox-circle-fill"></i></div>
                         </div>
-                        <span class="hobby-label">Братья Стругацкие</span>
+                        <span class="hobby-label">Братья Аркадий и Борис Стругацкие</span>
                     </div>
                     <div class="image-rc" data-status="0">
                         <div class="image-wrapper">
@@ -103,17 +109,21 @@
                     </div>
                 </div>
 
-                <button class="verify-btn" onclick="calculateCompatibility()">✨ Подтвердить выбор ✨</button>
+                <button class="verify-btn" onclick="calculateCompatibility()"> Подтвердить выбор </button>
             </div>
+
+            <div id="compatibility-result" style="display: none;"></div>
+
         </main>
 
         <footer class="card-block">
-            <div id="compatibility-result" style="display: none;"></div>
-            <p>© 2026 Ильина Ксения. Ссылка на <a href="http://uni-vologda.ac.ru" target="_blank">сайт кафедры</a>.</p>
-            <div id="visitor-counter">👥 Посетителей: <span>0</span></div>
+            <p>© 2026 Ильина Ксения. Ссылка на <a href="https://pm.vogu35.ru/" target="_blank">сайт кафедры</a>.</p>
+            <div class="visitor" id="visitor-counter">Посетителей: <span>0</span></div>
         </footer>
     </div>
-    <a href="#" class="scroll-top">↑</a>
-    <script src="js/counter.js" defer></script>
+    <!-- <a href="#" class="scroll-top">↑</a> -->
+    <button id="scrollToTopBtn" class="back-to-top" aria-label="Вернуться наверх">
+        ↑
+    </button>
 </body>
 </html>
