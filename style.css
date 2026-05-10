@@ -238,6 +238,7 @@
 
 h2 {
    color: #ED6F9E;
+   margin: 0;
    /* font-size: 2.2rem; */
    /* text-align: center; */
 }
@@ -246,6 +247,27 @@ img {
    display: block;
    max-width: 100%;
    height: auto;
+}
+
+.visitor {
+   margin-top: -20px;
+   color: #7A7724;
+   font-size: 1.3rem;
+}
+
+footer {
+   color: #7A7724;
+   font-size: 1.3rem;
+}
+
+body a {
+   color: #ED6F9E;
+   text-decoration: none; 
+   transition: color 0.3s ease; 
+}
+
+footer a:active {
+   color: #9E9C69;
 }
 
 /* 
@@ -261,8 +283,13 @@ header nav ul li a {
    font-size: 2.2rem;
 }
 
+header nav {
+   position: relative;
+   z-index: 999;
+}
+
 header {
-   border-bottom: 1px solid #ddd;
+   /* border-bottom: 1px solid #ddd; */
    text-align: center;
 }
 
@@ -309,6 +336,9 @@ body {
    border-radius: 35px;
    padding: 20px;
    width: 100%;
+
+   font-size: 1.5rem;
+   color: #7A7724;
 }
 
 /* ЛИЛИИ, header */
@@ -393,19 +423,7 @@ body {
    z-index: 4;
 }
 
- /* ====================================*/
-
-.scroll-top {
-   position: fixed;
-   bottom: 20px;
-   right: 20px;
-   text-decoration: none;
-   background: #eee;
-   padding: 10px 15px;
-   border-radius: 50%;
-   color: #000;
-   border: 1px solid #ccc;
-}
+/* ================================= */
 
 .card-block h2 {
    font-size: 2.2rem;
@@ -564,11 +582,12 @@ body {
 
 }
 
-/* ============================================
-   СТИЛИ ДЛЯ СТРАНИЦЫ "УВЛЕЧЕНИЯ" (hobbies.html)
-   ============================================ */
+/* 
+============================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ "УВЛЕЧЕНИЯ" 
+============================================ 
+*/
 
-/* Заголовок страницы Увлечения */
 .about-me-header2 {
    color: #ED6F9E;
    font-family: "m_Andes", sans-serif;
@@ -577,15 +596,12 @@ body {
    margin: 20px 0;
 }
 
-/* Контейнер для капчи */
 #recaptcha-rc {
    margin: 30px auto;
    max-width: 850px;
    width: 100%;
 }
 
-
-/* Сетка с картинками */
 #images-rc {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -595,13 +611,11 @@ body {
    padding: 20px;
 }
 
-/* Каждая карточка с картинкой */
 .image-rc {
    text-align: center;
    transition: all 0.3s ease;
 }
 
-/* Стили для картинок */
 .image-rc img {
    width: 100%;
    aspect-ratio: 1 / 1;
@@ -644,9 +658,11 @@ body {
    background: #F3EBD8;
 }
 
-/* ============================================
+/* 
+============================================
   РЕЗУЛЬТАТ ТЕСТА НА СОВМЕСТИМОСТЬ
-  ============================================ */
+  ============================================ 
+*/
 
 .compatibility-result {
    background: linear-gradient(135deg, #F3EBD8, #fff);
@@ -901,7 +917,6 @@ body {
 
    border-top: 5px solid #ED6F9E;
    border-bottom: 5px solid #ED6F9E;
-   /* padding: 0; */
    margin: 20px -20px 0 -20px;
 }
 
@@ -923,6 +938,19 @@ body {
 
 .about-photo img:last-child {
    border-radius: 0 0 35px 0; 
+}
+
+.photo-form {
+   border-radius: 20px;
+   margin-bottom: 20px;
+}
+
+.about-section {
+   margin-bottom: 20px;
+}
+
+.about-section:last-of-type {
+   margin-bottom: 0;
 }
 
 .starter-collage-container {
@@ -948,6 +976,16 @@ body {
    filter: drop-shadow(0 0 5px rgba(122, 119, 36, 0.8));
 }
 
+.collage-hint {
+   text-align: center;
+   font-family: 'Caveat', cursive; 
+   margin-top: -70px;
+   margin-bottom: 20px;
+   opacity: 0.8;
+   font-style: italic;
+   cursor: default;
+}
+
 /* ЛЕВАЯ СТОРОНА */
 
 /* Скетчбуки */
@@ -969,7 +1007,7 @@ body {
    max-width: 120px;
 }
 
-/* СУМКА (Добавленный класс и код) */
+/* СУМКА */
 .item-bag { 
    left: 6%; 
    top: 65%; 
@@ -1039,6 +1077,12 @@ body {
    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.tooltip-content h4 {
+   color: #ED6F9E;
+   font-size: 1.8rem;
+   margin: 0;
+}
+
 .tooltip-right {
    left: 130%;
 }
@@ -1052,11 +1096,10 @@ body {
    bottom: 120%; 
    left: 50%;
    transform: translateX(-50%); 
-   width: max-content; /* Ширина по контенту, чтобы не сжимался текст */
+   width: max-content;
     
-    /* Чтобы текст не был слишком узким или широким */
    max-width: 300px; 
-   white-space: normal; /* Разрешаем перенос текста, если нужно */
+   white-space: normal; 
    /* white-space: nowrap;  */
 }
 
@@ -1078,7 +1121,101 @@ body {
    to { opacity: 1; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+   .starter-collage-container {
+       height: auto; 
+       min-height: auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 30px; 
+       margin: 20px 0;
+   }
+
+   .portrait-item {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important; 
+      margin: 0 auto;
+      max-width: 200px !important;
+      order: -1; 
+   }
+
+   .starter-item {
+       position: relative !important; 
+       left: auto !important;
+       right: auto !important;
+       top: auto !important;
+       transform: none !important;
+       /* max-width: 180px !important;  */
+       margin: 0 auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .tooltip-content {
+       position: relative !important; 
+       display: none; 
+       width: 90vw !important; 
+       max-width: 320px;
+       left: auto !important;
+       right: auto !important;
+       bottom: auto !important;
+       top: auto !important;
+       transform: none !important;
+       margin-top: 15px; 
+       box-shadow: none;
+       text-align: center;
+   }
+
+   .starter-item.active .tooltip-content {
+       display: block;
+   }
+
+   .starter-item:hover {
+       animation: none;
+       transform: scale(1.05);
+   }
+
+   .collage-hint {
+       margin-top: 20px; 
+   }
+
+   .portrait-item[id="portrait"] {
+      position: relative !important;
+      left: auto !important;
+      top: auto !important;
+      transform: none !important;
+      margin: 0 auto !important;
+      width: fit-content;
+  }
+
+  #tooltip-portrait.tooltip-content {
+      position: relative !important;
+      top: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      right: auto !important;
+      transform: none !important; 
+      
+      display: none;
+      width: 280px !important;
+      max-width: 90vw;
+  }
+
+  .portrait-item.active #tooltip-portrait {
+      display: block !important;
+  }
+
+  .portrait-item img {
+      max-width: 180px !important;
+      height: auto;
+  }
+}
+
+/* @media (max-width: 600px) {
    .starter-collage-container {
        height: auto; 
        display: flex;
@@ -1098,21 +1235,144 @@ body {
        max-width: 100px;
        margin: 0;
    }
+} */
+
+
+/* 
+============================================
+   СТИЛИ ДЛЯ ГАЛЕРЕИ (Pinterest-стиль)
+============================================ 
+*/
+
+.gallery-header {
+   position: relative;
+   height: auto;
+   display: flex;
+   flex-direction: column;
 }
 
+.gallery-promo {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
+}
 
-/* ============================================
-   СТИЛИ ДЛЯ ГАЛЕРЕИ (Pinterest-стиль)
-   ============================================ */
+.gallery-promo::before,
+.gallery-promo::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   right: 0;
+   height: 5px;
+   background-color: #ED6F9E; 
+   z-index: 1;
+   margin: 0 -20px 0 -20px;
+}
 
-/* Контейнер сетки */
+.gallery-promo::before {
+   top: 0;
+}
+
+.gallery-promo::after {
+   bottom: 0;
+}
+
+.ticket-group {
+   position: relative;
+}
+
+.ticket-group img {
+   width: 280px;
+}
+
+.gallery-title {
+   flex: 1;
+   font-size: 5.5rem;
+   margin: 0;
+   text-align: right;
+   line-height: 0.9;
+   padding-top: 20px;
+
+   font-family: "m_Andes", sans-serif;
+   color: #ED6F9E;
+}
+
+.ticket-group span {
+   position: absolute;
+   color: #4a4a4a;
+   pointer-events: none;
+}
+
+.t-1 {
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   top: 50%;
+   left: 60%;
+   transform: translate(-50%, -50%);
+   font-size: 1rem;
+   line-height: 0.9;
+   white-space: nowrap;
+   font-family: "m_Andes", sans-serif;
+   color: #9E9C69;
+}
+
+.t-2 {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   font-weight: normal;
+    
+   bottom: 17px;
+   left: 34px;
+
+   transform: rotate(-90deg); 
+   transform-origin: left bottom;
+   font-size: 0.7rem;
+   opacity: 0.7;
+   color: #9E9C69;
+}
+
+@media (max-width: 768px) {
+   .gallery-promo {
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .ticket-group img {
+      width: 240px; 
+   }
+
+   .t-1 {
+      font-size: 0.9rem;
+   }
+
+   .gallery-title {
+      text-align: center;
+      font-size: 4rem; 
+      width: 100%;
+      padding-top: 10px;
+      flex: none; 
+   }
+
+   .gallery-promo::before,
+   .gallery-promo::after {
+      margin: 0 -20px; 
+   }
+}
+
 .gallery-grid {
    position: relative;
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
+   width: 100% !important;
+   margin: 0;
+   padding: 0;
 }
-/* Одна карточка */
+
 .gallery-item {
    margin-bottom: 20px;
    margin-bottom: 0 !important;
@@ -1121,7 +1381,6 @@ body {
    background: #fff;
 }
 
-/* Картинка внутри карточки */
 .gallery-item img {
    display: block;
    width: 100%;
@@ -1129,7 +1388,6 @@ body {
    transition: transform 0.4s ease;
 }
 
-/* Подпись под картинкой */
 .gallery-caption {
    display: none;
    padding: 12px 16px;
@@ -1149,7 +1407,6 @@ body {
    color: #9E9C69;
 }
 
-/* Hover-эффект – твоя "фишка" по ТЗ */
 .gallery-item:hover {
    transform: translateY(-6px);
    box-shadow: 0 12px 25px rgba(237, 111, 158, 0.2);
@@ -1159,7 +1416,6 @@ body {
    transform: scale(1.02);
 }
 
-/* Лёгкая анимация появления карточек */
 .gallery-item {
    opacity: 0;
    transform: translateY(20px);
@@ -1173,7 +1429,6 @@ body {
    }
 }
 
-/* Задержка для каждой карточки (необязательно) */
 .gallery-item:nth-child(1) { animation-delay: 0.05s; }
 .gallery-item:nth-child(2) { animation-delay: 0.10s; }
 .gallery-item:nth-child(3) { animation-delay: 0.15s; }
@@ -1181,7 +1436,6 @@ body {
 .gallery-item:nth-child(5) { animation-delay: 0.25s; }
 .gallery-item:nth-child(6) { animation-delay: 0.30s; }
 
-/* Адаптив */
 @media (max-width: 600px) {
    .gallery-caption h3 {
        font-size: 1.2rem;
@@ -1191,52 +1445,50 @@ body {
    }
 }
 
-/* Настройки количества колонок */
-/* Для больших экранов (3 колонки) */
 @media (min-width: 900px) {
    .gallery-item { width: calc(33.333% - 14px ); }
 }
 
-/* Для планшетов (2 колонки) */
 @media (min-width: 600px) and (max-width: 899px) {
    .gallery-item { width: calc(50%-10px); }
 }
 
-/* Для телефонов (1 колонка) */
 @media (max-width: 599px) {
    .gallery-item { width: 100%; }
 }
 
-/* ============================================
+/* 
+============================================
    LIGHTBOX ДЛЯ ГАЛЕРЕИ
-   ============================================ */
-   .gallery-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 2000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-  }
-  .modal-content {
+============================================ 
+*/
+.gallery-modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.85);
+   z-index: 2000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.modal-content {
    position: relative;
    width: auto;
    min-width: 300px;
    max-width: 90vw; 
-    max-height: 90vh;
+   max-height: 90vh;
    background: #F3EBD8;
    border-radius: 35px;
    padding: 30px;
    text-align: center;
    cursor: default;
    
-   /* Выравниваем элементы внутри модального окна */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -1244,49 +1496,48 @@ body {
    overflow-y: auto;
 }
   
-  .modal-content img {
-      max-width: 95%;
-      max-height: 70vh;
-      border-radius: 20px;
-      object-fit: contain;
-  }
+.modal-content img {
+   max-width: 95%;
+   max-height: 70vh;
+   border-radius: 20px;
+   object-fit: contain;
+}
   
-  .modal-close {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #ED6F9E;
-      cursor: pointer;
-      transition: 0.2s;
-  }
+.modal-close {
+   position: absolute;
+   top: 15px;
+   right: 25px;
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: #ED6F9E;
+   cursor: pointer;
+   transition: 0.2s;
+}
   
-  .modal-close:hover {
-      color: #7A7724;
-      transform: scale(1.1);
-  }
+.modal-close:hover {
+   color: #7A7724;
+   transform: scale(1.1);
+}
   
-  .modal-caption {
-      margin-top: 15px;
-      font-family: 'Caveat', sans-serif;
-  }
+.modal-caption {
+   margin-top: 15px;
+   font-family: 'Caveat', sans-serif;
+}
   
-  .modal-caption h3 {
-      color: #ED6F9E;
-      margin: 0;
-      font-size: 3rem !important;;
-  }
+.modal-caption h3 {
+   color: #ED6F9E;
+   margin: 0;
+   font-size: 3rem !important;;
+}
   
-  .modal-caption p {
-      color: #9E9C69;
-      margin: 5px 0 0;
-      font-size: 2.5rem !important;;
-  }
+.modal-caption p {
+   color: #9E9C69;
+   margin: 5px 0 0;
+   font-size: 2.5rem !important;;
+}
 
-  /* Делаем результат видимым */
 .rc-card-footer {
-   display: flex !important; /* Показываем нижнюю панель */
+   display: flex !important;
    justify-content: center;
    padding: 15px;
    background: #f9f9f9;
@@ -1294,7 +1545,6 @@ body {
    min-height: 50px;
 }
 
-/* Стили для текста результата (если он появляется там) */
 .rc-result-message {
    display: block !important;
    color: #333 !important;
@@ -1303,193 +1553,187 @@ body {
    z-index: 100;
 }
 
-/* Фикс для того, чтобы капча не обрезала результат */
 #recaptcha-card {
-   height: auto !important; /* Позволяем блоку растягиваться под результат */
+   height: auto !important; 
    overflow: visible !important;
 }
 
-/* ============================================
+/* 
+============================================
    ТЕСТ СОВМЕСТИМОСТИ (УВЛЕЧЕНИЯ)
-   ============================================ */
+============================================ 
+*/
 
-   .compatibility-test {
-      background: #F3EBD8;
-      border-radius: 35px;
-      padding: 25px;
-  }
+.compatibility-test {
+   /* background: #F3EBD8; */
+   border-radius: 35px;
+   padding: 20px;
+}
   
-  .test-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ED6F9E;
-      padding-bottom: 15px;
-  }
+.test-header {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
   
-  .test-logo img {
-      display: block;
-  }
-  
-  .test-title {
-      font-family: "m_Andes", sans-serif;
-      font-size: 1.8rem;
-      color: #ED6F9E;
-      letter-spacing: 1px;
-  }
-  
-  .test-subtitle {
-      text-align: center;
-      font-size: 1.4rem;
-      color: #7A7724;
-      margin-bottom: 25px;
-      font-family: 'Caveat', cursive;
-  }
-  
-  .images-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-bottom: 30px;
-  }
-  
-  .image-rc {
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-  }
-  
-  .image-wrapper {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-  }
-  
-  .image-wrapper img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      transition: filter 0.3s;
-  }
-  
-  .check-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: white;
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #4CAF50;
-      font-size: 24px;
-      opacity: 0;
-      transform: scale(0);
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  
-  .image-rc.selected .check-badge {
-      opacity: 1;
-      transform: scale(1);
-  }
-  
-  .image-rc.selected .image-wrapper img {
-      filter: brightness(0.85);
-      outline: 3px solid #ED6F9E;
-      outline-offset: -3px;
-  }
-  
-  .hobby-label {
-      display: block;
-      margin-top: 10px;
-      font-family: 'Caveat', sans-serif;
-      font-size: 1.2rem;
-      color: #9E9C69;
-      font-weight: 500;
-      transition: color 0.2s;
-  }
-  
-  .image-rc.selected .hobby-label {
-      color: #ED6F9E;
-      font-weight: bold;
-  }
-  
-  .image-wrapper:hover {
-      transform: scale(1.02);
-  }
-  
-  .verify-btn {
-      background: #ED6F9E;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 14px 24px;
-      font-size: 1.4rem;
-      font-family: 'Caveat', sans-serif;
-      cursor: pointer;
-      width: 100%;
-      transition: all 0.3s ease;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .verify-btn:hover {
-      background: #d45a8a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(237,111,158,0.3);
-  }
-  
-  @media (max-width: 700px) {
-      .images-grid {
-          gap: 15px;
-      }
-      .hobby-label {
-          font-size: 1rem;
-      }
-      .test-title {
-          font-size: 1.4rem;
-      }
-  }
-  
-  @media (max-width: 500px) {
-      .images-grid {
-          grid-template-columns: repeat(2, 1fr);
-      }
-  }
+.test-logo img {
+   display: block;
+}
 
-  #compatibility-result .result-card {
-   background: linear-gradient(135deg, #F3EBD8, #fff);
+.test-subtitle {
+   text-align: center;
+   font-size: 1.8rem;
+   color: #7A7724;
+   font-family: 'Caveat', cursive;
+}
+
+.images-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 25px;
+   margin-bottom: 30px;
+}
+
+.image-rc {
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.image-wrapper {
+   position: relative;
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.image-wrapper img {
+   width: 100%;
+   aspect-ratio: 1 / 1;
+   object-fit: cover;
+   display: block;
+   transition: filter 0.3s;
+}
+
+.check-badge {
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   background: white;
+   border-radius: 50%;
+   width: 28px;
+   height: 28px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #4CAF50;
+   font-size: 24px;
+   opacity: 0;
+   transform: scale(0);
+   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.image-rc.selected .check-badge {
+   opacity: 1;
+   transform: scale(1);
+}
+
+.image-rc.selected .image-wrapper img {
+   filter: brightness(0.85);
+   outline: 3px solid #ED6F9E;
+   outline-offset: -3px;
+}
+
+.hobby-label {
+   display: block;
+   margin-top: 10px;
+   font-family: 'Caveat', sans-serif;
+   font-size: 1.2rem;
+   color: #9E9C69;
+   font-weight: 500;
+   transition: color 0.2s;
+}
+
+.image-rc.selected .hobby-label {
+   color: #ED6F9E;
+   font-weight: bold;
+}
+
+.image-wrapper:hover {
+   transform: scale(1.02);
+}
+
+.verify-btn {
+   background: #ED6F9E;
+   color: #e8d9c5;
+   border: none;
+   border-radius: 50px;
+   padding: 14px 24px;
+   font-size: 2rem;
+   font-family: 'Caveat', sans-serif;
+   cursor: pointer;
+   width: 100%;
+   transition: all 0.3s ease;
+   letter-spacing: 1px;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.verify-btn:hover {
+   background: #d45a8a;
+   transform: translateY(-2px);
+   box-shadow: 0 8px 20px rgba(237,111,158,0.3);
+}
+
+@media (max-width: 700px) {
+   .images-grid {
+         gap: 15px;
+   }
+   .hobby-label {
+         font-size: 1rem;
+   }
+   .test-title {
+         font-size: 1.4rem;
+   }
+}
+
+@media (max-width: 500px) {
+   .images-grid {
+         grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+#compatibility-result .result-card {
+   /* background: linear-gradient(135deg, #F3EBD8, #fff); */
+   background: #F3EBD8;
    border-radius: 35px;
    padding: 25px;
    margin-top: 20px;
    text-align: center;
    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
+
 #compatibility-result h3 {
    color: #ED6F9E;
    font-family: "m_Andes", sans-serif;
    font-size: 2rem;
    margin: 0 0 15px;
 }
+
 #compatibility-result p {
    color: #7A7724;
    font-size: 1.3rem;
    margin-bottom: 15px;
 }
+
 .user-selected {
    color: #9E9C69;
    font-size: 1.1rem;
    margin: 15px 0;
    font-style: italic;
 }
+
 #compatibility-result button {
    background: transparent;
    border: 2px solid #ED6F9E;
@@ -1501,26 +1745,90 @@ body {
    font-size: 1.2rem;
    transition: all 0.2s;
 }
+
 #compatibility-result button:hover {
    background: #ED6F9E;
    color: white;
 }
 
-/* ============================================
+/* 
+============================================
    ПОРТФОЛИО
-   ============================================ */
+============================================ 
+*/
 
-   .portfolio-section {
-      margin-bottom: 20px;
-  }
-  .portfolio-section h2 {
-      color: #ED6F9E;
-      font-family: "m_Andes", sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      border-left: 5px solid #ED6F9E;
-      padding-left: 15px;
-  }
+.portfolio-header {
+   position: relative; 
+   min-height: 520px;  
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.header-content {
+   position: relative;
+   flex-grow: 1;
+   width: 100%;
+}
+
+.title-group {
+   position: absolute;
+   top: 0;
+   right: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end; 
+   z-index: 10;
+}
+
+.title-group h1 {
+   font-size: 5.5rem;
+   text-align: right;
+   margin: 0;
+   line-height: 0.85;
+}
+
+.decor-badge {
+   width: 200px;
+   margin-top: 10px;
+   margin-right: -30px;
+   transform: rotate(10deg);
+   filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.decor-folder {
+   position: absolute;
+   left: -20px; 
+   bottom: -20px;
+   width: 400px;
+   z-index: 1;
+}
+
+@media (max-width: 768px) {
+   .portfolio-header { min-height: 350px; }
+   .title-group h1 { font-size: 2.8rem; }
+   .title-group { right: 20px; }
+   .decor-folder { width: 240px; left: -10px; bottom: -10px; }
+   .decor-badge { width: 100px; }
+}
+
+.portfolio-section {
+   margin-bottom: 20px;
+}
+
+.portfolio-section:last-of-type {
+   margin-bottom: 0;
+}
+
+.portfolio-section h2 {
+   color: #ED6F9E;
+   font-family: "m_Andes", sans-serif;
+   font-size: 1.8rem;
+   margin-bottom: 12px;
+   border-left: 5px solid #ED6F9E;
+   padding-left: 15px;
+}
+
   .portfolio-list {
       list-style: disc;
       padding-left: 20px;
@@ -1529,17 +1837,9 @@ body {
   }
   .portfolio-list li {
       margin-bottom: 8px;
+      font-size: 1.5rem;
   }
-  .achievement-badge {
-      display: inline-block;
-      background: #ED6F9E;
-      color: white;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-family: "m_Andes", sans-serif;
-      font-size: 1.2rem;
-      margin-top: 15px;
-  }
+
   .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -1547,12 +1847,13 @@ body {
   }
   .skill-cat h3 {
       color: #ED6F9E;
-      font-size: 1.3rem;
+      font-size: 1.8rem;
       margin-bottom: 6px;
   }
   .skill-cat p {
       color: #7A7724;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      line-height: 1.2;
   }
   .project-item {
       background: rgba(237,111,158,0.05);
@@ -1562,18 +1863,10 @@ body {
   }
   .project-item h3 {
       color: #7A7724;
-      font-size: 1.3rem;
+      font-size: 1.8rem;
       margin-bottom: 8px;
   }
   .project-item p {
       color: #9E9C69;
-      font-size: 1rem;
-  }
-  .review {
-      background: white;
-      padding: 15px;
-      border-radius: 25px;
-      font-style: italic;
-      color: #4a4a4a;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      font-size: 1.5rem;
   }
